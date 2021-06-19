@@ -329,3 +329,19 @@ a {
   top: -6px;
   right: 5%;
 }
+
+.midia {
+  display: flex;
+}
+
+.midia__title {
+  margin-top: 0;
+}
+
+.midia__body {
+  margin: 0 2rem;
+}
+
+.midia__image {
+  margin-top: 1rem;
+}

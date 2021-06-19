@@ -208,3 +208,38 @@ a {
     font-size: 1.5rem;
   }
 }
+/*Input feild with search*/
+
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3rem;
+}
+
+::placeholder {
+  color: #d7e7eb;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+.input-group {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  display: flex;
+}
+
+.input-group .btn {
+  margin: 1px;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+}

@@ -42,6 +42,7 @@ h3 {
 p {
   margin-top: 0;
 }
+
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -59,25 +60,30 @@ p {
 a {
   text-decoration: none;
 }
+
 .link-arrow {
   font-size: 2rem;
   color: var(--color-accent);
   text-transform: uppercase;
   font-weight: bold;
 }
+
 .link-arrow::after {
   content: "-->";
   margin-left: 5px;
   transition: margin 0.2s;
 }
+
 .link-arrow:hover::after {
   margin-left: 10px;
 }
+
 @media screen and (min-width: 1024px) {
   .link-arrow {
     font-size: 1.5rem;
   }
 }
+
 .badge {
   border-radius: 20px;
   font-size: 2rem;
@@ -85,18 +91,22 @@ a {
   padding: 0.5rem 2rem;
   white-space: nowrap;
 }
+
 .badge--primary {
   background: var(--color-primary);
   color: #fff;
 }
+
 .badge--secondary {
   background: var(--color-secondary);
   color: #fff;
 }
+
 .badge--small {
   font-size: 1.6rem;
   padding: 0.5rem 1.5rem;
 }
+
 @media screen and (min-width: 1024px) {
   .badge {
     font-size: 1.5rem;
@@ -105,44 +115,65 @@ a {
     font-size: 1.2rem;
   }
 }
+
 .list {
   list-style: none;
   padding-left: 0;
   color: var(--color-headings);
 }
+
 .list--inline .list__item {
   display: inline-block;
   margin-right: 2rem;
 }
+
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
 }
+
 .list--tick .list__item {
   padding-left: 0.5rem;
   margin-bottom: 1rem;
 }
+
 @media screen and (min-width: 1024px) {
   .list--tick .list__item {
     padding-left: 0;
   }
 }
+
 /*ICONS*/
 .icon {
   height: 40px;
   width: 40px;
 }
+
 .icon--primary {
   fill: var(--color-primary);
 }
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon-container {
+  align-items: center;
   background: #f3f9fa;
-  width: 64px;
-  height: 64px;
   border-radius: 100%;
   display: inline-flex;
+  height: 64px;
   justify-content: center;
-  align-items: center;
+  width: 64px;
+}
+
+.icon-container--accent {
+  background: var(--color-accent);
 }
 
 .btn {
@@ -284,15 +315,15 @@ a {
 .plan__billing-cycle {
   font-size: 2.4rem;
   font-weight: 300;
-  opacity: 0.8;
   margin-right: 1rem;
+  opacity: 0.8;
 }
 
 .plan__description {
+  display: block;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1px;
-  display: block;
 }
 
 .plan .list__item {
@@ -324,10 +355,10 @@ a {
 .plan--popular .card__header::before {
   content: url(../images/popular.svg);
   display: inline-block;
-  width: 40px;
   position: absolute;
-  top: -6px;
   right: 5%;
+  top: -6px;
+  width: 40px;
 }
 
 .midia {
@@ -391,5 +422,49 @@ a {
 
   .quote__company {
     font-size: 1.6rem;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.testimonial {
+  padding: 3.5rem;
+}
+
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  width: 100%;
+  border-radius: 10px;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote__text,
+  .testimonial.quote__author {
+    font-size: 2rem;
+  }
+  .testimonial .quote__text {
+    margin-left: 4rem;
   }
 }

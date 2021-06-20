@@ -206,6 +206,12 @@ a {
   border: 2px solid var(--color-headings);
 }
 
+.btn--outline:hover {
+  background: rgb(6, 6, 83);
+  color: white;
+  font-size: 1.7rem;
+}
+
 .btn--primary:hover {
   background: var(--color-headings);
   color: #fff;
@@ -359,6 +365,21 @@ a {
   .plan__description {
     font-size: 1.7rem;
   }
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+
+.plan {
+  transition: transform 0.3s ease-out;
+}
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 .plan--popular .card__header {
@@ -672,7 +693,7 @@ a {
   box-shadow: 0 0 30px 20px #e6ebee;
   border: 0;
   margin: 4rem auto;
-  max-width: 680px;
+  max-width: 0px;
 }
 
 .block-domain__prices {
@@ -690,4 +711,13 @@ a {
   .block-domain__prices {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
+}
+/*****************/
+.blocks-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.blocks-plans .card {
+  max-width: 500px;
+  margin: 0 auto;
 }

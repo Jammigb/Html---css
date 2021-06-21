@@ -120,7 +120,6 @@ a {
 .list {
   list-style: none;
   padding-left: 0;
-  color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -131,6 +130,7 @@ a {
 .list--tick {
   list-style-image: url(../images/tick.svg);
   padding-left: 3rem;
+  color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -397,6 +397,7 @@ a {
 
 .midia {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .midia__title {
@@ -596,7 +597,12 @@ a {
 
 .block--skewed--right {
   padding-bottom: calc(--padding-vertical + 4rem);
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+
+.block--skewed--left {
+  padding-bottom: calc(--padding-vertical + 4rem);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 90%);
 }
 
 .container {
@@ -720,4 +726,44 @@ a {
 .blocks-plans .card {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.feature {
+  gap: 4rem;
+  margin: 12rem;
+}
+
+.feature_image {
+  width: 100%;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
+}
+
+.block-sc-image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-sc .grid {
+    grid-template-columns: 50% 50%;
+  }
+  .block-sc-image {
+    justify-self: end;
+  }
+
+  .block-sc-image > img {
+    width: auto;
+    max-width: 700px;
+  }
 }
